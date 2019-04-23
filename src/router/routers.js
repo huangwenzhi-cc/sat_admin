@@ -51,6 +51,37 @@ export default [
     ]
   },
   {
+    path: '/Item_bank',
+    name: 'Item_bank',
+    component: Main,
+    meta: {
+      hideInBread: true,
+      title: '题库',
+    },
+    children: [
+      {
+        path: 'Subject_entry',
+        name: 'Subject_entry',
+        meta: {
+          icon: 'ios-albums',
+          title: '试题录入'
+        },
+        component: () => import('@/view/demo/Subject_entry/Subject_entry.vue')
+      }
+    ],
+    children: [
+      {
+        path: 'Test_entry',
+        name: 'Test_entry',
+        meta: {
+          icon: 'ios-albums',
+          title: '试卷录入'
+        },
+        component: () => import('@/view/demo/Test_entry/Test_entry.vue')
+      }
+    ]
+  },
+  {
     path: '',
     name: 'doc',
     meta: {
